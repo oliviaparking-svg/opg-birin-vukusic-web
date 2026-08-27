@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OPG Birin Vukušić — Domaće maslinovo ulje iz Vodica i Jezera</title>
+<meta name="description" content="OPG Birin Vukušić — obiteljska proizvodnja hladno prešanog maslinovog ulja iz Vodica i Jezera, Dalmacija. Oko 120 stabala, autohtone i talijanske sorte, ulje najprije za vlastiti stol.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+
+/* ============ TOKENS ============ */
+:root{
+  --gold:#DEBB25;
+  --gold-deep:#B5941C;
+  --brown:#44371A;
+  --brown-soft:#5C4A26;
+  --cream:#FAF6EC;
+  --paper:#F3EDDC;
+  --stone:#E4DCC6;
+  --olive:#6E7350;
+  --sea:#2E5259;
+  --ink:#2A2412;
+  --line:rgba(68,55,26,0.15);
+  --radius:2px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Jost', sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.65;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+
+h1,h2,h3,h4{
+  font-family:'Fraunces', serif;
+  font-weight:500;
+  color:var(--brown);
+  line-height:1.15;
+  letter-spacing:-0.01em;
+}
+
+.eyebrow{
+  font-family:'Jost',sans-serif;
+  font-size:0.72rem;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  font-weight:500;
+  margin-bottom:14px;
+  display:block;
+}
+
+.container{
+  max-width:1120px;
+  margin:0 auto;
+  padding:0 32px;
+}
+
+section{
+  padding:110px 0;
+}
+
+@media (max-width:768px){
+  section{padding:70px 0;}
+  .container{padding:0 22px;}
+}
+
+/* ============ OLIVE BRANCH DIVIDER (signature element) ============ */
+.branch-divider{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  margin:0 auto 40px;
+  width:fit-content;
+  opacity:0.8;
+}
+.branch-divider .stem{
+  width:56px;height:1px;background:var(--olive);
+}
+.branch-divider svg{width:26px;height:26px;color:var(--olive);}
+
+/* ============ NAV ============ */
+.nav{
+  position:fixed;top:0;left:0;right:0;
+  z-index:100;
+  background:rgba(250,246,236,0.0);
+  transition:background 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease;
+  padding:26px 0;
+}
+.nav.scrolled{
+  background:rgba(250,246,236,0.94);
+  backdrop-filter:blur(8px);
+  box-shadow:0 1px 0 var(--line);
+  padding:16px 0;
+}
+.nav-inner{
+  max-width:1120px;margin:0 auto;padding:0 32px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.brand{
+  font-family:'Fraunces',serif;
+  font-size:1.05rem;
+  font-weight:500;
+  color:#fff;
+  letter-spacing:0.01em;
+  transition:color 0.35s ease;
+}
+.brand span{color:#fff;}
+.nav.scrolled .brand,
+.nav.scrolled .brand span{color:var(--brown);}
+.nav-links{
+  display:flex;gap:34px;
+  list-style:none;
+}
+.nav-links a{
+  font-size:0.82rem;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:#fff;
+  font-weight:500;
+  position:relative;
+  padding-bottom:4px;
+  text-shadow:0 1px 6px rgba(0,0,0,0.35);
+  transition:color 0.35s ease, text-shadow 0.35s ease;
+}
+.nav.scrolled .nav-links a{
+  color:var(--brown-soft);
+  text-shadow:none;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:0;left:0;right:100%;
+  height:1px;background:var(--gold-deep);
+  transition:right 0.3s ease;
+}
+.nav-links a:hover::after{right:0;}
+.nav-toggle{display:none;}
+
+@media (max-width:860px){
+  .nav-links{
+    position:fixed;top:0;right:0;height:100vh;width:78%;max-width:320px;
+    background:var(--cream);
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+    gap:26px;
+    padding:0 44px;
+    transform:translateX(100%);
+    transition:transform 0.4s ease;
+    box-shadow:-6px 0 30px rgba(0,0,0,0.12);
+  }
+  .nav-links.open{transform:translateX(0);}
+  .nav-toggle{
+    display:flex;flex-direction:column;gap:5px;
+    background:none;border:none;cursor:pointer;padding:8px;
+    z-index:110;
+  }
+  .nav-toggle span{width:24px;height:2px;background:var(--brown);display:block;}
+}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;
+  height:100vh;
+  min-height:560px;
+  display:flex;
+  align-items:flex-end;
+  color:#fff;
+}
+.hero-img{
+  position:absolute;inset:0;
+  background-image:url('images/hero-maslinik-more.jpg');
+  background-size:cover;
+  background-position:center 62%;
+}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(42,36,18,0.08) 0%, rgba(42,36,18,0.08) 40%, rgba(42,36,18,0.62) 100%);
+}
+.hero-content{
+  position:relative;z-index:2;
+  width:100%;
+  padding-bottom:9vh;
+  text-align:center;
+}
+.hero-content .eyebrow{color:var(--gold);opacity:0.95;letter-spacing:0.28em;}
+.hero-content h1{
+  color:#fff;
+  font-size:clamp(2.6rem,6vw,4.6rem);
+  font-weight:500;
+  margin-bottom:18px;
+}
+.hero-content p{
+  font-size:clamp(1.05rem,2vw,1.3rem);
+  font-weight:300;
+  font-style:italic;
+  font-family:'Fraunces',serif;
+  color:#F3EDDC;
+  opacity:0.95;
+}
+.scroll-cue{
+  position:absolute;bottom:34px;left:50%;transform:translateX(-50%);
+  z-index:2;
+  width:1px;height:46px;
+  background:linear-gradient(180deg, transparent, rgba(255,255,255,0.7));
+}
+
+/* ============ PHILOSOPHY BAND ============ */
+.philosophy{
+  background:var(--brown);
+  color:var(--cream);
+  padding:120px 0;
+  text-align:center;
+  position:relative;
+}
+.philosophy .container{max-width:820px;}
+.philosophy .branch-divider .stem{background:var(--gold);}
+.philosophy .branch-divider svg{color:var(--gold);}
+.philosophy p{
+  font-family:'Fraunces',serif;
+  font-size:clamp(1.35rem,2.6vw,1.9rem);
+  font-weight:400;
+  line-height:1.5;
+  color:#F6EFDD;
+}
+.philosophy p em{
+  color:var(--gold);
+  font-style:normal;
+  font-weight:500;
+}
+
+/* ============ SECTION HEADERS ============ */
+.section-head{
+  text-align:center;
+  max-width:640px;
+  margin:0 auto 64px;
+}
+.section-head h2{
+  font-size:clamp(1.9rem,3.6vw,2.7rem);
+}
+.section-head p{
+  margin-top:16px;
+  color:var(--brown-soft);
+  font-size:1.02rem;
+}
+
+/* ============ STORY ============ */
+#prica{background:var(--cream);}
+.story-lead{
+  max-width:760px;margin:0 auto 70px;text-align:center;
+  font-family:'Fraunces',serif;
+  font-size:clamp(1.15rem,2vw,1.4rem);
+  color:var(--brown-soft);
+  font-weight:400;
+  line-height:1.6;
+}
+.story-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:64px;
+  align-items:center;
+  margin-bottom:96px;
+}
+.story-grid.reverse .story-text{order:2;}
+.story-grid.reverse .story-media{order:1;}
+.story-text h3{
+  font-size:clamp(1.5rem,2.6vw,2rem);
+  margin-bottom:20px;
+}
+.story-text p{margin-bottom:16px;color:var(--brown-soft);}
+.story-text p:last-child{margin-bottom:0;}
+.story-media img{
+  width:100%;height:100%;object-fit:cover;
+  aspect-ratio:4/5;
+  border-radius:var(--radius);
+}
+.pull-quote{
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-size:1.25rem;
+  color:var(--brown);
+  border-left:2px solid var(--gold);
+  padding:4px 0 4px 22px;
+  margin:22px 0;
+}
+
+@media (max-width:860px){
+  .story-grid{grid-template-columns:1fr;gap:28px;}
+  .story-grid.reverse .story-text{order:1;}
+  .story-grid.reverse .story-media{order:2;}
+  .story-media img{aspect-ratio:16/11;}
+}
+
+/* father section - full width feature */
+.father-feature{
+  background:var(--stone);
+  padding:100px 0;
+  margin:0 0 96px;
+}
+.father-feature .container{
+  display:grid;grid-template-columns:0.9fr 1.1fr;gap:70px;align-items:center;
+}
+.father-feature img{aspect-ratio:3/4;object-fit:cover;border-radius:var(--radius);}
+.father-quote{
+  font-family:'Fraunces',serif;
+  font-size:clamp(1.3rem,2.4vw,1.7rem);
+  color:var(--brown);
+  line-height:1.5;
+  margin:22px 0;
+}
+@media (max-width:860px){
+  .father-feature .container{grid-template-columns:1fr;gap:30px;}
+}
+
+/* ============ MASLINICI (numbers) ============ */
+#masline{
+  background:var(--brown);
+  color:var(--cream);
+}
+#masline .eyebrow{color:var(--gold);}
+#masline .section-head h2{color:#fff;}
+#masline .section-head p{color:#D9CEB0;}
+.big-number{
+  text-align:center;
+  margin-bottom:70px;
+}
+.big-number .num{
+  font-family:'Fraunces',serif;
+  font-size:clamp(4.5rem,12vw,8rem);
+  font-weight:500;
+  color:var(--gold);
+  line-height:1;
+}
+.big-number .cap{
+  font-size:0.95rem;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:#D9CEB0;
+  margin-top:6px;
+}
+.big-number .tagline{
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-size:1.3rem;
+  color:#F3EDDC;
+  margin-top:26px;
+}
+.locations-row{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  border-top:1px solid rgba(246,239,221,0.18);
+  margin-bottom:70px;
+}
+.locations-row .loc{
+  padding:40px 46px;
+  border-right:1px solid rgba(246,239,221,0.18);
+}
+.locations-row .loc:last-child{border-right:none;}
+.locations-row h4{color:var(--gold);font-size:1.3rem;margin-bottom:10px;}
+.locations-row p{color:#D9CEB0;font-size:0.98rem;}
+@media (max-width:768px){
+  .locations-row{grid-template-columns:1fr;}
+  .locations-row .loc{border-right:none;border-bottom:1px solid rgba(246,239,221,0.18);}
+}
+
+.varieties{
+  display:grid;grid-template-columns:1fr 1fr;gap:50px;
+  border-top:1px solid rgba(246,239,221,0.18);
+  padding-top:56px;
+}
+.varieties h4{
+  font-size:0.78rem;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:18px;font-weight:500;
+}
+.varieties ul{list-style:none;}
+.varieties li{
+  font-family:'Fraunces',serif;
+  font-size:1.25rem;
+  color:#F3EDDC;
+  padding:12px 0;
+  border-bottom:1px solid rgba(246,239,221,0.1);
+}
+@media (max-width:768px){.varieties{grid-template-columns:1fr;gap:30px;}}
+
+/* photo strip inside masline */
+.photo-strip{
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;
+  margin-top:70px;
+}
+.photo-strip img{aspect-ratio:3/4;object-fit:cover;border-radius:var(--radius);}
+@media (max-width:768px){.photo-strip{grid-template-columns:1fr 1fr;}}
+
+.location-map{
+  margin-top:70px;
+  border-radius:var(--radius);
+  overflow:hidden;
+}
+.location-map img{width:100%;aspect-ratio:16/10;object-fit:cover;}
+.location-caption{
+  text-align:center;
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-size:0.95rem;
+  color:#D9CEB0;
+  margin-top:14px;
+}
+
+/* ============ RAD / OBRADA ============ */
+#rad{background:var(--paper);}
+.work-grid{
+  display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:start;
+  margin-bottom:90px;
+}
+.work-grid img{width:100%;object-fit:cover;aspect-ratio:5/6;border-radius:var(--radius);}
+.roles{
+  display:flex;flex-direction:column;gap:22px;margin-top:26px;
+}
+.role{
+  padding-left:20px;border-left:2px solid var(--olive);
+}
+.role h4{font-size:1.05rem;color:var(--brown);margin-bottom:4px;font-family:'Jost',sans-serif;font-weight:600;}
+.role p{color:var(--brown-soft);font-size:0.96rem;}
+
+.eco-box{
+  background:var(--cream);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:44px;
+  margin-top:20px;
+}
+.eco-box p{color:var(--brown-soft);margin-bottom:14px;}
+.eco-box p:last-child{margin-bottom:0;}
+
+@media (max-width:860px){
+  .work-grid{grid-template-columns:1fr;gap:30px;}
+}
+
+/* ============ BERBA ============ */
+#berba{background:var(--cream);}
+.berba-intro{
+  max-width:700px;margin:0 auto 60px;text-align:center;
+  color:var(--brown-soft);
+}
+.berba-steps{
+  display:grid;grid-template-columns:repeat(5,1fr);
+  gap:10px;
+  margin-bottom:80px;
+}
+.berba-steps .step{
+  text-align:center;padding:22px 10px;
+  border-top:2px solid var(--gold);
+}
+.berba-steps .step .n{
+  font-family:'Fraunces',serif;color:var(--gold-deep);font-size:0.85rem;margin-bottom:8px;display:block;
+}
+.berba-steps .step p{font-size:0.88rem;color:var(--brown-soft);}
+@media (max-width:860px){
+  .berba-steps{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:520px){
+  .berba-steps{grid-template-columns:1fr 1fr;}
+}
+
+.berba-gallery{
+  display:grid;
+  grid-template-columns:1.1fr 1fr 1fr;
+  grid-template-rows:auto auto;
+  gap:14px;
+  margin-bottom:90px;
+}
+.berba-gallery .g1{grid-row:1/3;}
+.berba-gallery img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius);}
+.berba-gallery .g1 img{aspect-ratio:3/4;}
+.berba-gallery .g2 img, .berba-gallery .g3 img, .berba-gallery .g4 img, .berba-gallery .g5 img{aspect-ratio:4/3;}
+@media (max-width:768px){
+  .berba-gallery{grid-template-columns:1fr 1fr;grid-template-rows:auto;}
+  .berba-gallery .g1{grid-row:auto;grid-column:1/3;}
+}
+
+.evolution{
+  background:var(--stone);
+  border-radius:var(--radius);
+  padding:56px;
+}
+.evolution h3{font-size:1.6rem;margin-bottom:22px;}
+.evolution p{color:var(--brown-soft);margin-bottom:14px;}
+.evolution p:last-child{margin-bottom:0;font-family:'Fraunces',serif;font-style:italic;color:var(--brown);font-size:1.1rem;}
+
+/* prerada + čuvanje */
+.process-band{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  margin-top:90px;
+  border-radius:var(--radius);
+  overflow:hidden;
+}
+.process-band .p-img{
+  background-size:cover;background-position:center;
+  min-height:380px;
+}
+.process-band .p-text{
+  background:var(--brown);
+  color:var(--cream);
+  padding:56px;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.process-band .p-text .eyebrow{color:var(--gold);}
+.process-band .p-text h3{color:#fff;margin-bottom:16px;font-size:1.6rem;}
+.process-band .p-text p{color:#D9CEB0;margin-bottom:12px;}
+.process-band .p-text p:last-child{margin-bottom:0;}
+@media (max-width:768px){
+  .process-band{grid-template-columns:1fr;}
+  .process-band .p-img{min-height:260px;}
+}
+
+/* ============ NAŠE ULJE ============ */
+#ulje{
+  background:var(--gold);
+  color:var(--brown);
+  padding:120px 0;
+  position:relative;
+}
+#ulje::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 20% 20%, rgba(255,255,255,0.14), transparent 55%);
+}
+#ulje .container{position:relative;}
+.ulje-inner{max-width:760px;margin:0 auto;text-align:center;}
+.ulje-inner .eyebrow{color:var(--brown);opacity:0.7;}
+.ulje-inner h2{
+  font-size:clamp(2rem,4vw,3rem);
+  margin-bottom:26px;
+}
+.ulje-inner p{
+  font-size:clamp(1.05rem,1.8vw,1.25rem);
+  color:var(--brown-soft);
+  margin-bottom:18px;
+}
+.ulje-inner p.final{
+  font-family:'Fraunces',serif;font-style:italic;font-size:1.4rem;
+  color:var(--brown);margin-top:30px;
+}
+
+/* ============ PAKIRANJA ============ */
+#pakiranja{background:var(--cream);}
+.price-table{
+  max-width:760px;margin:0 auto;
+}
+.price-row{
+  display:flex;align-items:baseline;justify-content:space-between;
+  padding:26px 4px;
+  border-bottom:1px solid var(--line);
+}
+.price-row:first-child{border-top:1px solid var(--line);}
+.price-row .p-name{
+  font-family:'Fraunces',serif;
+  font-size:1.3rem;
+  color:var(--brown);
+}
+.price-row .p-mat{
+  font-size:0.85rem;
+  color:var(--olive);
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  margin-left:12px;
+}
+.price-row .p-val{
+  font-family:'Fraunces',serif;
+  font-size:1.3rem;
+  font-weight:500;
+  color:var(--gold-deep);
+  white-space:nowrap;
+}
+.price-note{
+  text-align:center;margin-top:34px;
+  color:var(--brown-soft);font-size:0.95rem;font-style:italic;
+  font-family:'Fraunces',serif;
+}
+
+/* ============ NARUČITE ============ */
+#narucite{
+  background:var(--sea);
+  color:#fff;
+}
+#narucite .eyebrow{color:#B7D4D6;}
+#narucite .section-head h2{color:#fff;}
+#narucite .section-head p{color:#CFE3E4;}
+.order-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:60px;
+}
+.order-block h4{
+  color:var(--gold);
+  font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;
+  margin-bottom:16px;font-family:'Jost',sans-serif;font-weight:500;
+}
+.order-block p{color:#DCEBEC;margin-bottom:14px;}
+.order-block p:last-child{margin-bottom:0;}
+@media (max-width:768px){.order-grid{grid-template-columns:1fr;gap:40px;}}
+
+/* ============ FINAL CTA ============ */
+.final-cta{
+  position:relative;
+  min-height:64vh;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;
+  color:#fff;
+}
+.final-cta .cta-img{
+  position:absolute;inset:0;
+  background-image:url('images/masline-grana-more-1.jpg');
+  background-size:cover;background-position:center;
+}
+.final-cta .cta-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(42,36,18,0.55), rgba(42,36,18,0.75));
+}
+.final-cta .cta-content{position:relative;z-index:2;padding:0 24px;}
+.final-cta h2{
+  color:#fff;
+  font-size:clamp(2rem,4.5vw,3.2rem);
+  margin-bottom:34px;
+}
+.btn{
+  display:inline-block;
+  padding:16px 42px;
+  background:var(--gold);
+  color:var(--brown);
+  font-family:'Jost',sans-serif;
+  font-weight:500;
+  font-size:0.9rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  border-radius:1px;
+  transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,0.25);}
+
+/* ============ KONTAKT / FOOTER ============ */
+footer{
+  background:var(--brown);
+  color:#D9CEB0;
+  padding:70px 0 34px;
+}
+.footer-grid{
+  display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:50px;
+  padding-bottom:44px;border-bottom:1px solid rgba(217,206,176,0.18);
+  margin-bottom:26px;
+}
+.footer-brand{font-family:'Fraunces',serif;color:#fff;font-size:1.3rem;margin-bottom:10px;}
+.footer-grid h5{
+  font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:14px;font-weight:500;
+}
+.footer-grid p, .footer-grid a{color:#D9CEB0;font-size:0.95rem;display:block;margin-bottom:6px;}
+.footer-bottom{
+  text-align:center;font-size:0.82rem;color:#A79A78;
+}
+@media (max-width:768px){
+  .footer-grid{grid-template-columns:1fr;gap:30px;}
+}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.8s ease, transform 0.8s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1;transform:none;transition:none;}
+  html{scroll-behavior:auto;}
+}
+
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="brand">OPG Birin <span>Vukušić</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Izbornik">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#pocetna">Početna</a></li>
+      <li><a href="#prica">Naša priča</a></li>
+      <li><a href="#masline">Naše masline</a></li>
+      <li><a href="#ulje">Naše ulje</a></li>
+      <li><a href="#narucite">Naručite</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="pocetna">
+  <div class="hero-img"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="eyebrow">Vodice · Jezera · Dalmacija</span>
+    <h1>OPG Birin Vukušić</h1>
+    <p>Domaće maslinovo ulje.<br>Okusite Dalmaciju.</p>
+  </div>
+  <div class="scroll-cue"></div>
+</header>
+
+<!-- ============ PHILOSOPHY ============ -->
+<section class="philosophy reveal">
+  <div class="container">
+    <div class="branch-divider">
+      <span class="stem"></span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2c0 6-4 8-4 13a4 4 0 0 0 8 0c0-5-4-7-4-13z"/><path d="M8 12c-3 1-5 4-5 4"/><path d="M16 12c3 1 5 4 5 4"/></svg>
+      <span class="stem"></span>
+    </div>
+    <p>Naše maslinovo ulje ne nastaje zato da bismo ga prodali. Nastaje zato što ga <em>naša obitelj želi imati na vlastitom stolu</em>. Tek ono što ostane nakon naših potreba nudimo onima koji, kao i mi, žele uživati u vrhunskom ulju, autentičnom mirisu i okusu Dalmacije.</p>
+  </div>
+</section>
+
+<!-- ============ NAŠA PRIČA ============ -->
+<section id="prica">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Naša priča</span>
+      <h2>Više generacija jedne obitelji</h2>
+    </div>
+
+    <p class="story-lead reveal">Naša priča s maslinama seže kroz više generacija, u vrijeme kada je zemlja hranila obitelj, a ono što bi iz nje dolazilo bilo je namijenjeno prodaji, dijeljenju i razmjeni dobara.</p>
+
+    <div class="story-grid reveal">
+      <div class="story-text">
+        <h3>Zemlja koja je hranila obitelj</h3>
+        <p>Po priči našeg oca, naši pradjed i djed živjeli su isključivo od zemlje — ona je hranila obitelj. Uz masline uzgajala se i vinova loza, višnje i smokve.</p>
+        <p>Višnje su se prodavale na otkup, od grožđa se proizvodilo vino, smokve su se sušile, a proizvodili su se i rakija i maslinovo ulje.</p>
+        <p>Vino, rakija, ulje i suhe smokve bili su predmet prodaje, ali i razmjene dobara — u vrijeme kada je zemlja bila izvor hrane, rada, trgovine i međusobne razmjene.</p>
+      </div>
+      <div class="story-media">
+        <img src="images/jezera-kornati-1.jpg" alt="Maslinik u Jezerima s pogledom na Kornate" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <!-- OTAC feature -->
+  <div class="father-feature reveal">
+    <div class="container">
+      <img src="images/otac-portret.jpg" alt="Naš otac u masliniku">
+      <div>
+        <span class="eyebrow">Naš otac</span>
+        <h3 style="font-size:clamp(1.6rem,2.8vw,2.1rem);">Rođen 1939.</h3>
+        <p style="color:var(--brown-soft);margin-top:16px;">Kada je preuzeo brigu o maslinicima nakon smrti našeg djeda, nastavio je obrađivati obiteljske masline i tome pristupio vrlo ozbiljno. Iako je odrastao uz zemlju i masline, smatrao je da iskustvo samo po sebi nije dovoljno — stalno je učio, educirao se i usavršavao.</p>
+        <p class="father-quote">„Vjerovao je da maslina uvijek može dati ono najbolje od sebe, samo joj treba znati pružiti ono što joj je potrebno."</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="story-grid reverse reveal">
+      <div class="story-text">
+        <h3>Maslinik u Jezerima</h3>
+        <p>Maslinik u Jezerima bio je posebna ljubav našeg oca. Smješten je uz samo more, s pogledom prema Kornatima. Dio stabala upravo je on posadio, dok su druga, stara stabla obnovljena i nastavljena njegovati.</p>
+        <p class="pull-quote">„Kao dijete sudjelovala sam u sadnji tih maslina. Prvih nekoliko godina, tijekom ljetnih mjeseci, nakon kupanja bih s ocem odlazila zalijevati mlada stabla, sve dok nisu dovoljno ojačala da mogu sama podnijeti ljetnu žeđ."</p>
+      </div>
+      <div class="story-media">
+        <img src="images/jezera-kamena-medja.jpg" alt="Kamena međa u masliniku u Jezerima s pogledom na more" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NAŠE MASLINE ============ -->
+<section id="masline">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Naše masline</span>
+      <h2>Mali, obiteljski maslinici</h2>
+    </div>
+
+    <div class="big-number reveal">
+      <div class="num">~120</div>
+      <div class="cap">stabala maslina</div>
+      <p class="tagline">Nismo veliki proizvođač. I ne želimo biti.</p>
+    </div>
+
+    <div class="locations-row reveal">
+      <div class="loc">
+        <h4>Jezera</h4>
+        <p>Jedan veći maslinik, smješten uz samo more, s pogledom prema Kornatima.</p>
+      </div>
+      <div class="loc">
+        <h4>Vodice</h4>
+        <p>Dva manja maslinika, obiteljsko nasljeđe.</p>
+      </div>
+    </div>
+
+    <div class="varieties reveal">
+      <div>
+        <h4>Autohtone sorte</h4>
+        <ul>
+          <li>Oblica</li>
+          <li>Levantinka</li>
+          <li>Lastovka</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Talijanske sorte</h4>
+        <ul>
+          <li>Leccino</li>
+          <li>Pendolino</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="location-map reveal">
+      <img src="images/lokacija-avion.jpg" alt="Pogled iz aviona na Jezera, gdje se nalazi naš maslinik uz more">
+      <p class="location-caption">Pogled iz aviona — naš maslinik u Jezerima, na samoj obali.</p>
+    </div>
+
+    <div class="photo-strip reveal">
+      <img src="images/jezera-kamena-medja.jpg" alt="Maslinik u Jezerima" loading="lazy">
+      <img src="images/masline-grana-more-2.jpg" alt="Grana masline s pogledom na more" loading="lazy">
+      <img src="images/kamena-medja-cvijece.jpg" alt="Maslinik uz kamenu među, ljeto" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ NAŠ RAD ============ -->
+<section id="rad">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Naš rad</span>
+      <h2>Masline obrađujemo sami</h2>
+    </div>
+
+    <div class="work-grid reveal">
+      <img src="images/kosilica-livada.jpg" alt="Košnja cvjetne livade u masliniku" loading="lazy">
+      <div>
+        <p style="color:var(--brown-soft);">Rad u maslinicima dijeli cijela obitelj. Svatko ima svoju ulogu, a posao se obavlja pažljivo i bez žurbe.</p>
+        <div class="roles">
+          <div class="role">
+            <h4>Rezidba</h4>
+            <p>Naša mama posebno sudjeluje u rezidbi i trenutno je naša glavna osoba za obrezivanje maslina.</p>
+          </div>
+          <div class="role">
+            <h4>Obrada i prerada</h4>
+            <p>Suprug i ja sudjelujemo u redovitoj obradi i održavanju maslina te u preradi maslina u ulje.</p>
+          </div>
+          <div class="role">
+            <h4>Berba</h4>
+            <p>U berbi nam pomažu rodbina i prijatelji — pravi obiteljski i zajednički pothvat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-head reveal" style="margin-bottom:40px;">
+      <span class="eyebrow">Obrada i priroda</span>
+      <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);">Bioraznolikost prije svega</h2>
+    </div>
+
+    <div class="work-grid reveal" style="align-items:center;">
+      <div class="eco-box" style="order:2;">
+        <p>U uzgoju koristimo samo sredstva dopuštena u ekološkoj proizvodnji, a maslinike obrađujemo na način kojim nastojimo očuvati prirodnu bioraznolikost.</p>
+        <p>Korov uklanjamo mehanički, košnjom. Ne kosimo pretjerano — u proljeće nastojimo s košnjom pričekati kako bi cvjetna livada što dulje ostala dostupna kukcima.</p>
+      </div>
+      <img src="images/cvjetna-livada.jpg" alt="Cvjetna livada u masliniku u proljeće" loading="lazy" style="order:1;">
+    </div>
+  </div>
+</section>
+
+<!-- ============ BERBA ============ -->
+<section id="berba">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Berba</span>
+      <h2>Od stabla do uljare, istoga dana</h2>
+    </div>
+
+    <p class="berba-intro reveal">Berba se posljednjih godina započinje ranije. Nekada se tradicionalno vezivala uz kasniji dio jeseni, ali promjene klime i suvremeni način prerade doveli su do ranijeg početka — danas je najčešće započinjemo oko polovice listopada, ovisno o godini i stanju maslina.</p>
+
+    <div class="berba-steps reveal">
+      <div class="step"><span class="n">Korak</span><p>Postavljanje prostirke ispod stabla</p></div>
+      <div class="step"><span class="n">Korak</span><p>Električni tresači i mehaničke beračice</p></div>
+      <div class="step"><span class="n">Korak</span><p>Skupljanje maslina s prostirke</p></div>
+      <div class="step"><span class="n">Korak</span><p>Odlaganje u kašete</p></div>
+      <div class="step"><span class="n">Korak</span><p>Neposredan odvoz na preradu</p></div>
+    </div>
+
+    <div class="berba-gallery reveal">
+      <div class="g1"><img src="images/dijete-berba.jpg" alt="Berba maslina električnim tresačem" loading="lazy"></div>
+      <div class="g2"><img src="images/berba-obitelj.jpg" alt="Obiteljska berba maslina na prostirci" loading="lazy"></div>
+      <div class="g3"><img src="images/masline-izbliza-1.jpg" alt="Ubrane masline izbliza" loading="lazy"></div>
+      <div class="g4"><img src="images/prikolica-kasete.jpg" alt="Kašete s ubranim maslinama na prikolici" loading="lazy"></div>
+      <div class="g5"><img src="images/nocna-uljara.jpg" alt="Odvoz maslina na preradu u uljaru" loading="lazy"></div>
+    </div>
+
+    <div class="evolution reveal">
+      <span class="eyebrow">Nekada i danas</span>
+      <h3>Od nekadašnjeg načina berbe do današnjeg pristupa</h3>
+      <p>Nekada se masline nakon branja čuvalo u moru sve dok berba ne bi bila završena, a tek su se potom odvozile na preradu. Takav način bio je posljedica tadašnjih uvjeta: nije bilo mogućnosti za skladištenje većih količina, nije se moglo ubrati onoliko maslina u jednom danu koliko danas možemo, a ni uljare nisu imale mogućnosti koje imaju danas.</p>
+      <p>S modernizacijom se promijenio i način berbe, a s njim i način prerade. Danas nam je cilj masline preraditi što je moguće prije nakon berbe, idealno istoga dana — masline koje su nakon berbe duže stajale daju ulje drugačijeg mirisa i okusa od onoga dobivenog preradom svježe ubranih maslina.</p>
+      <p>Čuvamo tradiciju, ali ne radimo nešto samo zato što se tako nekada radilo.</p>
+    </div>
+
+    <div class="process-band reveal">
+      <div class="p-img" style="background-image:url('images/masline-hrpa-uljara.jpg');"></div>
+      <div class="p-text">
+        <span class="eyebrow">Prerada</span>
+        <h3><a href="https://olive-oil.hr/" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--gold);">Uljara Sv. Ivan</a>, Vodice</h3>
+        <p>Masline se prerađuju istoga dana kada su ubrane, hladnim prešanjem.</p>
+        <p>Nakon prerade ulje se čuva u hermetički zatvorenim inox bačvama, u podrumu, pri temperaturi oko 15°C.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NAŠE ULJE ============ -->
+<section id="ulje">
+  <div class="container">
+    <div class="ulje-inner reveal">
+      <span class="eyebrow">Naše ulje</span>
+      <h2>Nismo veliki proizvođač.<br>I ne želimo biti.</h2>
+      <p>Proizvodimo onoliko koliko naše masline mogu dati. Naše količine su ograničene, ali u kvaliteti ne želimo raditi kompromise.</p>
+      <p class="final">Najprije želimo imati vrhunsko ulje na vlastitom stolu. Tek ono što ostane nakon naših potreba nudimo onima koji žele uživati, kao i mi, u njegovom autentičnom mirisu i okusu.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAKIRANJA ============ -->
+<section id="pakiranja">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Naš proizvod</span>
+      <h2>Spremno za vaš stol</h2>
+    </div>
+
+    <!-- CIJENE PRIVREMENO SKLONJENE (na zahtjev) — vratiti po potrebi:
+    <div class="price-table reveal">
+      <div class="price-row">
+        <div><span class="p-name">250 ml</span><span class="p-mat">Staklo</span></div>
+        <div class="p-val">6 €</div>
+      </div>
+      <div class="price-row">
+        <div><span class="p-name">500 ml</span><span class="p-mat">Staklo</span></div>
+        <div class="p-val">12 €</div>
+      </div>
+      <div class="price-row">
+        <div><span class="p-name">750 ml</span><span class="p-mat">Staklo</span></div>
+        <div class="p-val">16 €</div>
+      </div>
+      <div class="price-row">
+        <div><span class="p-name">1 L</span><span class="p-mat">Plastika</span></div>
+        <div class="p-val">16 €</div>
+      </div>
+      <div class="price-row">
+        <div><span class="p-name">5 L</span><span class="p-mat">Plastika</span></div>
+        <div class="p-val">80 €</div>
+      </div>
+    </div>
+    <p class="price-note">Za veće količine cijena prema dogovoru.</p>
+    -->
+
+    <div class="photo-strip reveal" style="margin-top:0;">
+      <img src="images/etiketa-boca-ruka.jpg" alt="Boca maslinovog ulja OPG Birin Vukušić" loading="lazy">
+      <img src="images/dvije-boce-stol.jpg" alt="Dvije boce maslinovog ulja" loading="lazy">
+      <img src="images/kasete-masline-zgrada.jpg" alt="Kašete s ubranim maslinama" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ NARUČITE ============ -->
+<section id="narucite">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Naručite</span>
+      <h2>Želite ponijeti okus Dalmacije sa sobom?</h2>
+    </div>
+
+    <div class="order-grid reveal">
+      <div class="order-block">
+        <h4>Narudžba</h4>
+        <p>Narudžba je moguća telefonom ili e-mailom.</p>
+        <p>Ulje šaljemo unutar Hrvatske prema dogovoru — trošak i način dostave dogovaramo ovisno o količini i načinu slanja.</p>
+      </div>
+      <div class="order-block">
+        <h4>Osobno preuzimanje</h4>
+        <p>Ulje je moguće osobno preuzeti na recepciji Olivia Parkinga u Vodicama tijekom ljetne sezone, dok parking radi. Izvan sezone osobno preuzimanje moguće je prema dogovoru.</p>
+        <p>Također je moguće dogovoriti preuzimanje na području Vodica i okolnih županija kada se može organizirati.</p>
+        <p style="font-family:'Fraunces',serif;font-style:italic;color:#fff;margin-top:18px;">Kontaktirajte nas i dogovorit ćemo najbolju opciju.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta">
+  <div class="cta-img"></div>
+  <div class="cta-overlay"></div>
+  <div class="cta-content reveal">
+    <h2>Ponesite malo naše<br>Dalmacije sa sobom.</h2>
+    <a href="#kontakt" class="btn">Kontaktirajte nas</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER / KONTAKT ============ -->
+<footer id="kontakt">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">OPG Birin Vukušić</div>
+        <p>Vodice · Jezera<br>Dalmacija, Hrvatska</p>
+      </div>
+      <div>
+        <h5>Kontakt</h5>
+        <a href="tel:+385989359078">+385 98 935 90 78</a>
+        <a href="mailto:gorana.birin@gmail.com">gorana.birin@gmail.com</a>
+      </div>
+      <div>
+        <h5>Navigacija</h5>
+        <a href="#prica">Naša priča</a>
+        <a href="#masline">Naše masline</a>
+        <a href="#ulje">Naše ulje</a>
+        <a href="#pakiranja">Pakiranja</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      OPG Birin Vukušić · Domaće maslinovo ulje · Vodice — Jezera
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav background on scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 40){ nav.classList.add('scrolled'); }
+  else{ nav.classList.remove('scrolled'); }
+});
+
+// Mobile nav toggle
+const toggle = document.getElementById('navToggle');
+const links = document.getElementById('navLinks');
+toggle.addEventListener('click', () => links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+// Reveal on scroll
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {threshold:0.12});
+revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

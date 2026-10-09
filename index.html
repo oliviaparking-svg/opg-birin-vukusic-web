@@ -148,6 +148,7 @@ section{
 }
 .nav-links a:hover::after{right:0;}
 .nav-toggle{display:none;}
+.lang-switch{display:none;}
 
 @media (max-width:860px){
   .nav-links{
@@ -169,6 +170,15 @@ section{
     z-index:110;
   }
   .nav-toggle span{width:24px;height:2px;background:var(--brown);display:block;}
+  .lang-switch{
+    display:inline-flex;align-items:center;justify-content:center;
+    margin-left:auto;margin-right:12px;
+    min-width:44px;height:34px;padding:0 12px;
+    border-radius:999px;
+    background:var(--gold);color:var(--brown);
+    font-family:'Jost',sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:0.12em;
+    box-shadow:0 2px 10px rgba(0,0,0,0.18);
+  }
 }
 
 /* ============ HERO ============ */
@@ -686,6 +696,7 @@ footer{
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="#" class="brand">OPG Birin <span>Vukušić</span></a>
+    <a href="/en/" class="lang-switch" lang="en" aria-label="English version">EN</a>
     <button class="nav-toggle" id="navToggle" aria-label="Izbornik">
       <span></span><span></span><span></span>
     </button>
@@ -738,7 +749,7 @@ footer{
     <div class="story-grid reveal">
       <div class="story-text">
         <h3>Zemlja koja je hranila obitelj</h3>
-        <p>Po priči našeg oca, naši pradjed i djed živjeli su isključivo od zemlje — ona je hranila obitelj. Uz masline uzgajala se i vinova loza, višnje i smokve.</p>
+        <p>Po priči našeg oca, naši pradjed i djed živjeli su isključivo od zemlje — ona je hranila obitelj. Uz masline uzgajala se i vinova loza, višnje, smokve i bajami.</p>
         <p>Višnje su se prodavale na otkup, od grožđa se proizvodilo vino, smokve su se sušile, a proizvodili su se i rakija i maslinovo ulje.</p>
         <p>Vino, rakija, ulje i suhe smokve bili su predmet prodaje, ali i razmjene dobara — u vrijeme kada je zemlja bila izvor hrane, rada, trgovine i međusobne razmjene.</p>
       </div>
@@ -915,7 +926,7 @@ footer{
         <span class="eyebrow">Prerada</span>
         <h3><a href="https://olive-oil.hr/" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--gold);">Uljara Sv. Ivan</a>, Vodice</h3>
         <p>Masline se prerađuju istoga dana kada su ubrane, hladnim prešanjem.</p>
-        <p>Nakon prerade ulje se čuva u hermetički zatvorenim inox bačvama, u podrumu, pri temperaturi oko 15°C.</p>
+        <p>Nakon prerade ulje se čuva u hermetički zatvorenim inox bačvama, u podrumu, pri temperaturi od 15 do 20 °C.</p>
       </div>
     </div>
   </div>
@@ -969,8 +980,8 @@ footer{
 
     <div class="photo-strip reveal" style="margin-top:0;">
       <img src="images/etiketa-boca-ruka.jpg" alt="Boca maslinovog ulja OPG Birin Vukušić" loading="lazy">
-      <img src="images/dvije-boce-stol.jpg" alt="Dvije boce maslinovog ulja" loading="lazy">
-      <img src="images/kasete-masline-zgrada.jpg" alt="Kašete s ubranim maslinama" loading="lazy">
+      <img src="images/dvije-boce-maslinik.jpg" alt="Dvije boce maslinovog ulja u masliniku" loading="lazy">
+      <img src="images/ulje-uljara-staklenka.jpg" alt="Svježe maslinovo ulje teče u staklenku u uljari" loading="lazy">
     </div>
   </div>
 </section>

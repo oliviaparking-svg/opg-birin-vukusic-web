@@ -147,6 +147,7 @@ transition:right 0.3s ease;
 }
 .nav-links a:hover::after{right:0;}
 .nav-toggle{display:none;}
+.lang-switch{display:none;}
 
 @media (max-width:860px){
 .nav-links{
@@ -168,6 +169,15 @@ background:none;border:none;cursor:pointer;padding:8px;
 z-index:110;
 }
 .nav-toggle span{width:24px;height:2px;background:var(--brown);display:block;}
+.lang-switch{
+display:inline-flex;align-items:center;justify-content:center;
+margin-left:auto;margin-right:12px;
+min-width:44px;height:34px;padding:0 12px;
+border-radius:999px;
+background:var(--gold);color:var(--brown);
+font-family:'Jost',sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:0.12em;
+box-shadow:0 2px 10px rgba(0,0,0,0.18);
+}
 }
 
 /* ============ HERO ============ */
@@ -685,6 +695,7 @@ html{scroll-behavior:auto;}
 <nav class="nav" id="nav">
 <div class="nav-inner">
 <a href="#" class="brand">OPG Birin <span>Vukušić</span></a>
+<a href="/" class="lang-switch" lang="hr" aria-label="Hrvatska verzija">HR</a>
 <button class="nav-toggle" id="navToggle" aria-label="Menu">
 <span></span><span></span><span></span>
 </button>
@@ -737,7 +748,7 @@ html{scroll-behavior:auto;}
 <div class="story-grid reveal">
 <div class="story-text">
 <h3>The land that fed the family</h3>
-<p>According to our father's story, our great-grandfather and grandfather lived solely off the land — it fed the family. Alongside olives, they also grew grapevines, cherries and figs.</p>
+<p>According to our father's story, our great-grandfather and grandfather lived solely off the land — it fed the family. Alongside olives, they also grew grapevines, cherries, figs and almonds.</p>
 <p>Cherries were sold to buyers, grapes were made into wine, figs were dried, and they also produced brandy (rakija) and olive oil.</p>
 <p>Wine, brandy, oil and dried figs were sold, but also traded — at a time when the land was a source of food, work, trade and mutual exchange.</p>
 </div>
@@ -914,7 +925,7 @@ html{scroll-behavior:auto;}
 <span class="eyebrow">Processing</span>
 <h3><a href="https://olive-oil.hr/" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--gold);">Uljara Sv. Ivan</a>, Vodice</h3>
 <p>The olives are processed the same day they are picked, by cold pressing.</p>
-<p>After processing, the oil is stored in hermetically sealed stainless steel barrels, in the cellar, at a temperature of around 15°C.</p>
+<p>After processing, the oil is stored in hermetically sealed stainless steel barrels, in the cellar, at a temperature of 15–20 °C.</p>
 </div>
 </div>
 </div>
@@ -968,8 +979,8 @@ html{scroll-behavior:auto;}
 
 <div class="photo-strip reveal" style="margin-top:0;">
 <img src="/images/etiketa-boca-ruka.jpg" alt="Bottle of OPG Birin Vukušić olive oil" loading="lazy">
-<img src="/images/dvije-boce-stol.jpg" alt="Two bottles of olive oil" loading="lazy">
-<img src="/images/kasete-masline-zgrada.jpg" alt="Crates of harvested olives" loading="lazy">
+<img src="/images/dvije-boce-maslinik.jpg" alt="Two bottles of olive oil in the olive grove" loading="lazy">
+<img src="/images/ulje-uljara-staklenka.jpg" alt="Fresh olive oil flowing into a glass jar at the mill" loading="lazy">
 </div>
 </div>
 </section>
